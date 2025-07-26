@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# VoiceCV Builder
 
-## Getting Started
+[VoiceCV Builder Demo]
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# 🗣️ Your Voice, Your CV, Instantly.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+VoiceCV Builder is an innovative web application developed for the Bhashini Startup Velocity 2.0 Hackathon. It aims to revolutionize resume creation by making it voice-driven and highly accessible.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Forget tedious typing! With VoiceCV Builder, you can simply speak your professional details, and watch your CV come to life in real-time.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# ✨ Features
 
-## Learn More
+* Voice Input: Easily dictate your resume content using your voice.
+* Multilingual Support: Speak in various Indian languages (and English) to populate your CV.
+* Real-time Editor: See instant updates as you add or modify content.
+* Structured Sections: Organize your resume with dedicated sections for personal info, experience, education, skills, projects, and awards.
+* PDF Export: Download your professionally formatted CV as a clean PDF document.
 
-To learn more about Next.js, take a look at the following resources:
+# 🚀 Get Started (Run Locally)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run VoiceCV Builder on your machine:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1.  Clone the repository:
+    git clone [https://github.com/sanjaaaaaa/voicecv_builder.git](https://github.com/sanjaaaaaa/voicecv_builder.git)
+    cd voicecv_builder
 
-## Deploy on Vercel
+2.  Install dependencies:
+    npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3.  Configure Bhashini Translation (Optional, but recommended for multilingual input):
+    * Open `src/context/VoiceContext.jsx`.
+    * Find `BHASHINI_TRANSLATION_ENDPOINT`, `INFERENCE_API_KEY`, and `UDYAT_KEY`.
+    * Replace the placeholder values (`"YOUR_..."`) with your actual Bhashini API endpoint and keys obtained from the Bhashini team.
+    * (Note: Voice input (ASR) uses your browser's native capabilities, but translation from Indian languages to English requires Bhashini's Translation API.)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4.  Start the application:
+    npm run dev
+
+5.  Open in browser:
+    Navigate to `http://localhost:3000`
+
+# 🛠️ Built With
+
+* [React.js](https://react.dev/) - Frontend library
+* [Next.js](https://nextjs.org/) - React framework
+* [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+* [Bhashini APIs](https://bhashini.gov.in/) - For multilingual translation (requires configuration)
+* [Google Gemini](https://gemini.google.com/) - For AI suggestions (mocked in current version)
+* [html2pdf.js](https://raw.githack.com/MrRio/jsPDF/master/docs/html2pdf.js.html) - PDF generation
+
+# 💡 Important Note
+This version of the project uses **in-memory data storage** and **does not include persistent backend storage**. All entered CV data will be lost upon refreshing the page or closing the browser. This was done to simplify the project for the hackathon submission.
+
+# 🤝 Contribution
+Contributions are welcome! Feel free to fork the repository, open issues, or submit pull requests.
+
+# 📄 License
+This project is open-source and available under the MIT License.
