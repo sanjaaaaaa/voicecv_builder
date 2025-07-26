@@ -1,8 +1,7 @@
 # VoiceCV Builder
 
 [VoiceCV Builder Demo]
-
-
+https://www.linkedin.com/feed/update/urn:li:activity:7354813013440253953/
 
 # 🗣️ Your Voice, Your CV, Instantly.
 
