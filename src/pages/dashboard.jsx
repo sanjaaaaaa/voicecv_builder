@@ -91,7 +91,7 @@ const DashboardPage = () => {
       <div className="bg-yellow-100 text-yellow-700 p-3 rounded-md mb-4 flex items-center border border-yellow-200">
         <ExclamationCircleIcon className="h-5 w-5 mr-2" />
         <p className="text-sm">
-          **Warning:** CVs listed here are from the current session only and are NOT saved persistently. If you close or refresh this page, all CV data will be lost.
+          {`**Warning:** CVs listed here are from the current session only and are NOT saved persistently. If you close or refresh this page, all CV data will be lost.`}
         </p>
       </div>
 
@@ -105,7 +105,7 @@ const DashboardPage = () => {
       {userCvs.length === 0 ? (
         <div className="bg-background-card p-8 rounded-lg shadow-xl text-center border border-border">
           <DocumentIcon className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-          <p className="text-xl text-text-light mb-4">You don't have any CVs saved yet.</p>
+          <p className="text-xl text-text-light mb-4">You don&apos;t have any CVs saved yet.</p> {/* Corrected 'don't' */}
           <Button onClick={handleCreateNewCv} variant="secondary">
             Start Your First CV
           </Button>
@@ -147,7 +147,8 @@ const DashboardPage = () => {
         confirmText="Delete"
         cancelText="Cancel"
       >
-        <p className="text-text">Are you sure you want to delete the CV titled "<span className="font-semibold">{cvToDeleteTitle}</span>"? This action cannot be undone.</p>
+        {/* Corrected " around cvToDeleteTitle */}
+        <p className="text-text">{`Are you sure you want to delete the CV titled "${cvToDeleteTitle}"? This action cannot be undone.`}</p>
       </Modal>
     </div>
   );
