@@ -3,10 +3,10 @@ import React from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import Button from '../src/components/ui/Button';
+import Button from '../components/ui/button';
 import { ArrowLeftIcon } from '@heroicons/react/24/solid';
 
-const CVPreview = dynamic(() => import('../src/components/builder/CVPreview'), { ssr: false });
+const CVPreview = dynamic(() => import('../components/builder/CVPreview'), { ssr: false });
 
 const PreviewPage = () => {
   return (
